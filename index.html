@@ -7,11 +7,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0">
     <script>
+        function price(text) {
+            /*text에 숫자가 들어가면 문자열로 변환해서 작동*/
+            text = text.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
+            return text;
+        }
         localStorage.setItem('item', 'black');
         document.write(localStorage.getItem('item'));
         document.write("<br>");
         sessionStorage.setItem('item', 'photoshop')
         document.write(sessionStorage.getItem('item'));
+        document.write("<br>");
+        document.write(location.pathname);
+        document.write("<br>");
+        document.write(location.pathname.split('/'));
+        document.write("<br>");
+        document.write(price(1000000000));
 
     </script>
 </head>
