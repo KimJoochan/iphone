@@ -1,17 +1,23 @@
 <!doctype html>
 
 <html>
-	<head>
-		<title>Page Title</title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="initial-scale=1.0">
-		<script>
-            localStorage.setItem('item','black');
-            document.write(localStorage.getItem('item'));
-        </script>
-	</head>
 
-	<body>
+<head>
+    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <script>
+        localStorage.setItem('item', 'black');
+        document.write(localStorage.getItem('item'));
+        document.write("<br>");
+        sessionStorage.setItem('item', 'photoshop')
+        document.write(sessionStorage.getItem('item'));
 
-	</body>
+    </script>
+</head>
+
+<body>
+
+</body>
+
 </html>
